@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LBANC", "LBANC\LBANC.csproj", "{38049B5E-A747-4C1D-9777-1EE9A2BD7F0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{68837B31-8C70-4CC0-9F22-955227948045}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38049B5E-A747-4C1D-9777-1EE9A2BD7F0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38049B5E-A747-4C1D-9777-1EE9A2BD7F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38049B5E-A747-4C1D-9777-1EE9A2BD7F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38049B5E-A747-4C1D-9777-1EE9A2BD7F0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68837B31-8C70-4CC0-9F22-955227948045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68837B31-8C70-4CC0-9F22-955227948045}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68837B31-8C70-4CC0-9F22-955227948045}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68837B31-8C70-4CC0-9F22-955227948045}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA9FA684-ED23-4B0B-931E-F4C48323F0CF}
+	EndGlobalSection
+EndGlobal
