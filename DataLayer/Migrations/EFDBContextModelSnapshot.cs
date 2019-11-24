@@ -33,7 +33,7 @@ namespace DataLayer.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MyProperty");
+                    b.ToTable("Directories");
                 });
 
             modelBuilder.Entity("DataLayer.Entitys.Material", b =>

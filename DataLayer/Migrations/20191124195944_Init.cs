@@ -2,12 +2,12 @@
 
 namespace DataLayer.Migrations
 {
-    public partial class Init1 : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "MyProperty",
+                name: "Directories",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -17,7 +17,7 @@ namespace DataLayer.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MyProperty", x => x.Id);
+                    table.PrimaryKey("PK_Directories", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -34,9 +34,9 @@ namespace DataLayer.Migrations
                 {
                     table.PrimaryKey("PK_Materials", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Materials_MyProperty_DirectoryId",
+                        name: "FK_Materials_Directories_DirectoryId",
                         column: x => x.DirectoryId,
-                        principalTable: "MyProperty",
+                        principalTable: "Directories",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -53,7 +53,7 @@ namespace DataLayer.Migrations
                 name: "Materials");
 
             migrationBuilder.DropTable(
-                name: "MyProperty");
+                name: "Directories");
         }
     }
 }
