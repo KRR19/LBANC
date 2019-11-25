@@ -6,21 +6,27 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using LBANC.Models;
+using DataLayer;
+using DataLayer.Entitys;
+using Microsoft.EntityFrameworkCore;
 
 namespace LBANC.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly EFDBContext _context;
+        public HomeController(ILogger<HomeController> logger, EFDBContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+            HelloModel _model = new HelloModel() { HelloMessage = "Hey Roman!" };
+            List<Directory> dirs = _context.Directories.Include(x => x.Materials).ToList();
+            return View(dirs);
         }
 
         public IActionResult Privacy()
