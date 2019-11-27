@@ -9,23 +9,31 @@ using LBANC.Models;
 using DataLayer;
 using DataLayer.Entitys;
 using Microsoft.EntityFrameworkCore;
+using BuissnesLayer.Interfaces;
+using BuissnesLayer;
 
 namespace LBANC.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly EFDBContext _context;
-        public HomeController(ILogger<HomeController> logger, EFDBContext context)
+        //private readonly EFDBContext _context;
+        //private readonly IDirectoryRepository _directoryRepository;
+        private readonly DataMAnager _dataManager;
+        public HomeController(ILogger<HomeController> logger, /*EFDBContext context, IDirectoryRepository directoryRepository,*/ DataMAnager dataManager)
         {
             _logger = logger;
-            _context = context;
+            //_context = context;
+            //_directoryRepository = directoryRepository;
+            _dataManager = dataManager;
         }
 
         public IActionResult Index()
         {
             HelloModel _model = new HelloModel() { HelloMessage = "Hey Roman!" };
-            List<Directory> dirs = _context.Directories.Include(x => x.Materials).ToList();
+            //List<Directory> dirs = _context.Directories.Include(x => x.Materials).ToList();
+            //List<Directory> dirs = _directoryRepository.GetAllDirectories().ToList();
+            List<Directory> dirs = _dataManager.Directorys.GetAllDirectories(true).ToList();
             return View(dirs);
         }
 
