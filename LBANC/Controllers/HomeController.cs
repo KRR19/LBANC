@@ -19,8 +19,8 @@ namespace LBANC.Controllers
         private readonly ILogger<HomeController> _logger;
         //private readonly EFDBContext _context;
         //private readonly IDirectoryRepository _directoryRepository;
-        private readonly DataMAnager _dataManager;
-        public HomeController(ILogger<HomeController> logger, /*EFDBContext context, IDirectoryRepository directoryRepository,*/ DataMAnager dataManager)
+        private readonly DataManager _dataManager;
+        public HomeController(ILogger<HomeController> logger, /*EFDBContext context, IDirectoryRepository directoryRepository,*/ DataManager dataManager)
         {
             _logger = logger;
             //_context = context;

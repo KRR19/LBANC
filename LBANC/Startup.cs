@@ -32,7 +32,7 @@ namespace LBANC
             services.AddDbContext<EFDBContext>(options => options.UseSqlServer(connection, b => b.MigrationsAssembly("DataLayer")));
             services.AddTransient<IDirectoryRepository, EFDirectoryRepository>();
             services.AddTransient<IMaterialRepository, EFMaterialsRepository>();
-            services.AddScoped<DataMAnager>();
+            services.AddScoped<DataManager>();
             services.AddControllersWithViews();
             services.AddMvc();
         }

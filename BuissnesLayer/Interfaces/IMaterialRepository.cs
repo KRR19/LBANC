@@ -9,7 +9,7 @@ namespace BuissnesLayer.Interfaces
     {
         IEnumerable<Material> GetAllMaterials(bool includeDirectory = false);
         Material GetMaterialById(int directoryId, bool includeDirectory = false);
-        void SaveDirectory(Material material);
+        void SaveMaterial(Material material);
         void DeleteDirectory(Material material);
     }
 }

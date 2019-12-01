@@ -46,7 +46,7 @@ namespace BuissnesLayer.Implementations
             }
         }
 
-        public void SaveDirectory(Material material)
+        public void SaveMaterial(Material material)
         {
             if(material.Id == 0 )
             {

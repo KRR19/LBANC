@@ -5,12 +5,12 @@ using System.Text;
 
 namespace BuissnesLayer
 {
-    public class DataMAnager
+    public class DataManager
     {
         private readonly IDirectoryRepository _directoryRepository;
         private readonly IMaterialRepository _materialRepository;
 
-        public DataMAnager(IDirectoryRepository directoryRepository, IMaterialRepository materialRepository)
+        public DataManager(IDirectoryRepository directoryRepository, IMaterialRepository materialRepository)
         {
             _directoryRepository = directoryRepository;
             _materialRepository = materialRepository;
